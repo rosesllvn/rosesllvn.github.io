@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Official support page for Wordwyrm, the slither, spell, and score word game from Poppy Studios.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f6eedf">
+  <title>Wordwyrm Support · Poppy Studios</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f6eedf;
+      --paper-deep: #eadbc0;
+      --panel: rgba(255, 252, 245, 0.84);
+      --ink: #2d251b;
+      --muted: #695c4c;
+      --poppy: #b94a05;
+      --poppy-dark: #8f3500;
+      --poppy-soft: #efd6bd;
+      --sage: #347044;
+      --sage-soft: #dce9dc;
+      --line: rgba(74, 58, 39, 0.18);
+      --shadow: rgba(68, 47, 23, 0.10);
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 3%, rgba(185, 74, 5, 0.10), transparent 26rem),
+        radial-gradient(circle at 88% 92%, rgba(52, 112, 68, 0.08), transparent 24rem),
+        linear-gradient(180deg, #fcf8ef 0%, var(--paper) 34%, #eee1ca 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--poppy-dark);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--sage);
+      outline-offset: 4px;
+      border-radius: 5px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 20;
+      transform: translateY(-180%);
+      padding: 10px 14px;
+      color: #fff;
+      background: var(--ink);
+      border-radius: 10px;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .page {
+      width: min(100% - 36px, 900px);
+      margin: 0 auto;
+      padding: 26px 0 72px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+      padding: 0 6px;
+    }
+
+    .studio {
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .nav-links a {
+      font-size: 0.84rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    header {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(32px, 7vw, 64px);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 32px;
+      box-shadow: 0 24px 60px var(--shadow);
+    }
+
+    header::after {
+      content: "W";
+      position: absolute;
+      right: -15px;
+      bottom: -90px;
+      color: rgba(52, 112, 68, 0.08);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(220px, 42vw, 340px);
+      font-style: italic;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+      margin: 0 0 12px;
+      color: var(--poppy);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.12;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0;
+      font-size: clamp(3rem, 10vw, 5.8rem);
+      font-weight: 700;
+      letter-spacing: -0.05em;
+    }
+
+    .tagline {
+      position: relative;
+      z-index: 1;
+      max-width: 650px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.1rem, 3vw, 1.45rem);
+      font-style: italic;
+    }
+
+    .intro {
+      position: relative;
+      z-index: 1;
+      max-width: 630px;
+      margin: 24px 0 0;
+    }
+
+    .button-row {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 11px 20px;
+      border: 2px solid var(--poppy);
+      border-radius: 999px;
+      text-decoration: none;
+    }
+
+    .button.primary {
+      color: #fff;
+      background: var(--poppy);
+      box-shadow: 0 9px 22px rgba(185, 74, 5, 0.20);
+    }
+
+    .button.primary:hover {
+      background: var(--poppy-dark);
+      border-color: var(--poppy-dark);
+    }
+
+    .button.secondary {
+      color: var(--poppy-dark);
+      background: rgba(255, 255, 255, 0.44);
+    }
+
+    main {
+      display: grid;
+      gap: 24px;
+      margin-top: 26px;
+    }
+
+    .card {
+      padding: clamp(24px, 5vw, 42px);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 12px 32px rgba(68, 47, 23, 0.06);
+    }
+
+    .card > :first-child {
+      margin-top: 0;
+    }
+
+    .card > :last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: clamp(1.65rem, 5vw, 2.3rem);
+      letter-spacing: -0.025em;
+    }
+
+    p {
+      margin: 0 0 16px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .step {
+      padding: 22px;
+      background: rgba(255, 255, 255, 0.48);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      margin-bottom: 12px;
+      color: #fff;
+      background: var(--sage);
+      border-radius: 50%;
+      font-weight: 800;
+    }
+
+    .step strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1.05rem;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    .faq-list {
+      border-top: 1px solid var(--line);
+    }
+
+    details {
+      border-bottom: 1px solid var(--line);
+    }
+
+    summary {
+      position: relative;
+      padding: 21px 42px 21px 0;
+      cursor: pointer;
+      font-weight: 750;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      position: absolute;
+      top: 16px;
+      right: 4px;
+      color: var(--poppy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.7rem;
+      line-height: 1;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      padding: 0 44px 20px 0;
+      color: var(--muted);
+    }
+
+    .contact {
+      text-align: center;
+      background: linear-gradient(145deg, rgba(255, 252, 245, 0.94), rgba(239, 214, 189, 0.82));
+      border-color: rgba(185, 74, 5, 0.25);
+    }
+
+    .contact .button {
+      margin-top: 8px;
+    }
+
+    footer {
+      padding: 28px 12px 0;
+      color: var(--muted);
+      font-size: 0.84rem;
+      text-align: center;
+    }
+
+    footer a {
+      margin: 0 7px;
+    }
+
+    @media (max-width: 680px) {
+      .page {
+        width: min(100% - 24px, 900px);
+        padding-top: 16px;
+      }
+
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 0 4px;
+      }
+
+      header {
+        border-radius: 24px;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        width: 100%;
+      }
+
+      header,
+      .card {
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#support">Skip to support information</a>
+
+  <div class="page">
+    <nav aria-label="Primary navigation">
+      <a class="studio" href="index.html">Poppy Studios</a>
+      <div class="nav-links">
+        <a href="#frequently-asked-questions">FAQ</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="mailto:ps.prisub@gmail.com?subject=Wordwyrm%20Support">Contact</a>
+      </div>
+    </nav>
+
+    <header id="support">
+      <p class="eyebrow">Slither · spell · score</p>
+      <h1>Wordwyrm Support</h1>
+      <p class="tagline">A welcoming place for gameplay help, questions, bug reports, and ideas.</p>
+      <p class="intro">Wordwyrm is a two-part word game from Poppy Studios. First, guide your wyrm to collect seven letters. Then use those letters to build as many words as you can.</p>
+
+      <div class="button-row">
+        <a class="button primary" href="mailto:ps.prisub@gmail.com?subject=Wordwyrm%20Support">Email support</a>
+        <a class="button secondary" href="privacy.html">Read the privacy policy</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="card" aria-labelledby="how-it-works">
+        <p class="eyebrow">The heart of the game</p>
+        <h2 id="how-it-works">One round, two parts</h2>
+        <p>You do not need to collect letters in spelling order. Gather any seven letter tiles during the slithering portion; the separate word-building portion begins afterward.</p>
+
+        <div class="steps">
+          <div class="step">
+            <span class="step-number" aria-hidden="true">1</span>
+            <strong>Slither and collect</strong>
+            <p>Swipe to steer the wyrm around the board. Collect seven letter tiles while avoiding collisions.</p>
+          </div>
+          <div class="step">
+            <span class="step-number" aria-hidden="true">2</span>
+            <strong>Build and score</strong>
+            <p>Use your collected letters to make words before time runs out. Longer and higher-value words score more.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="frequently-asked-questions" aria-labelledby="faq-heading">
+        <p class="eyebrow">Quick answers</p>
+        <h2 id="faq-heading">Frequently asked questions</h2>
+
+        <div class="faq-list">
+          <details>
+            <summary>How do I steer the wyrm?</summary>
+            <p>Swipe up, down, left, or right anywhere on the gameplay area. New players receive an interactive steering tutorial during their first game.</p>
+          </details>
+
+          <details>
+            <summary>Do the letters have to spell a word while I collect them?</summary>
+            <p>No. The slithering portion is only for gathering seven letters. Afterward, Wordwyrm moves to a separate screen where you can rearrange those letters and build words in any order.</p>
+          </details>
+
+          <details>
+            <summary>Which game mode should I choose?</summary>
+            <p>Classic is the standard Wordwyrm experience. Relaxed removes the pressure of losing lives, while Hard increases the challenge for experienced players. You can change modes from the main menu.</p>
+          </details>
+
+          <details>
+            <summary>How do I restore Remove Ads?</summary>
+            <p>Open Wordwyrm, choose Remove Ads on the main menu, and select Restore Purchases. Use the same Apple Account that originally purchased Remove Ads.</p>
+          </details>
+
+          <details>
+            <summary>How do I change my advertising privacy choices?</summary>
+            <p>Open Privacy Choices inside Wordwyrm whenever that control is available in your region. Wordwyrm requests contextual, non-personalized ads and does not request Apple’s App Tracking Transparency permission.</p>
+          </details>
+
+          <details>
+            <summary>Where is my score and progress stored?</summary>
+            <p>Your scores, settings, tutorials, and saved run are stored locally on your device. Wordwyrm does not require a player account.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="card contact" aria-labelledby="contact-heading">
+        <p class="eyebrow">We would love to hear from you</p>
+        <h2 id="contact-heading">Still need help?</h2>
+        <p>For a question, bug report, general feedback, or feature idea, email Poppy Studios. If you are reporting a problem, please mention your device model and what happened just before the problem appeared.</p>
+        <a class="button primary" href="mailto:ps.prisub@gmail.com?subject=Wordwyrm%20Support">ps.prisub@gmail.com</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Poppy Studios · Wordwyrm</p>
+      <p><a href="privacy.html">Privacy Policy</a> · <a href="mailto:ps.prisub@gmail.com?subject=Wordwyrm%20Support">Support</a></p>
+    </footer>
+  </div>
+</body>
+</html>

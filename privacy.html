@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for Wordwyrm, an iOS game from Poppy Studios.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f5eedf">
+  <title>Privacy Policy · Wordwyrm</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f5eedf;
+      --panel: rgba(255, 252, 245, 0.82);
+      --ink: #2d251b;
+      --muted: #665a4b;
+      --poppy: #a83f00;
+      --sage: #366f43;
+      --line: rgba(74, 58, 39, 0.18);
+      --shadow: rgba(68, 47, 23, 0.10);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 4%, rgba(168, 63, 0, 0.08), transparent 26rem),
+        linear-gradient(180deg, #fbf7ee 0%, var(--paper) 28%, #eee1ca 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--poppy);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--sage);
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 10;
+      transform: translateY(-180%);
+      padding: 10px 14px;
+      color: #fff;
+      background: var(--ink);
+      border-radius: 10px;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .page {
+      width: min(100% - 36px, 860px);
+      margin: 0 auto;
+      padding: 26px 0 72px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+      padding: 0 6px;
+    }
+
+    .studio {
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.05rem;
+      text-decoration: none;
+    }
+
+    header {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(28px, 6vw, 54px);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      box-shadow: 0 24px 60px var(--shadow);
+    }
+
+    header::after {
+      content: "W";
+      position: absolute;
+      right: -12px;
+      bottom: -76px;
+      color: rgba(54, 111, 67, 0.08);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(190px, 38vw, 310px);
+      font-style: italic;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+      margin: 0 0 12px;
+      color: var(--poppy);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.12;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      margin: 0;
+      font-size: clamp(2.7rem, 9vw, 5.25rem);
+      font-weight: 700;
+      letter-spacing: -0.045em;
+    }
+
+    .subtitle {
+      position: relative;
+      z-index: 1;
+      max-width: 620px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.08rem, 3vw, 1.35rem);
+      font-style: italic;
+    }
+
+    .updated {
+      position: relative;
+      z-index: 1;
+      margin: 28px 0 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    main {
+      display: grid;
+      gap: 24px;
+      margin-top: 26px;
+    }
+
+    .card {
+      padding: clamp(24px, 5vw, 42px);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 12px 32px rgba(68, 47, 23, 0.06);
+    }
+
+    .card > :first-child {
+      margin-top: 0;
+    }
+
+    .card > :last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: clamp(1.55rem, 5vw, 2.1rem);
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      margin: 26px 0 8px;
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    p,
+    ul {
+      margin: 0 0 16px;
+    }
+
+    ul {
+      padding-left: 1.25em;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .summary {
+      border-color: rgba(168, 63, 0, 0.28);
+      background: linear-gradient(135deg, rgba(255, 250, 240, 0.94), rgba(239, 216, 193, 0.72));
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .summary-item {
+      min-height: 132px;
+      padding: 18px;
+      background: rgba(255, 255, 255, 0.48);
+      border: 1px solid rgba(168, 63, 0, 0.16);
+      border-radius: 16px;
+    }
+
+    .summary-item strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--poppy);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .summary-item span {
+      font-size: 0.94rem;
+      line-height: 1.45;
+    }
+
+    .note {
+      margin-top: 22px;
+      padding: 16px 18px;
+      background: rgba(54, 111, 67, 0.09);
+      border-left: 4px solid var(--sage);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .contact {
+      text-align: center;
+      background: linear-gradient(145deg, rgba(255, 252, 245, 0.9), rgba(234, 220, 194, 0.9));
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      margin-top: 8px;
+      padding: 10px 18px;
+      color: #fff;
+      background: var(--poppy);
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(168, 63, 0, 0.18);
+    }
+
+    footer {
+      padding: 28px 12px 0;
+      color: var(--muted);
+      font-size: 0.84rem;
+      text-align: center;
+    }
+
+    @media (max-width: 680px) {
+      .page {
+        width: min(100% - 24px, 860px);
+        padding-top: 18px;
+      }
+
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      header {
+        border-radius: 22px;
+      }
+
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .summary-item {
+        min-height: auto;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        font-size: 11pt;
+      }
+
+      .page {
+        width: 100%;
+        padding: 0;
+      }
+
+      header,
+      .card {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#policy">Skip to privacy policy</a>
+
+  <div class="page">
+    <nav aria-label="Primary navigation">
+      <a class="studio" href="index.html">← Wordwyrm Support</a>
+      <a href="mailto:ps.prisub@gmail.com?subject=Wordwyrm%20Support">Contact</a>
+    </nav>
+
+    <header>
+      <p class="eyebrow">Poppy Studios · Wordwyrm</p>
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">A clear look at what stays on your device, what our advertising partner may process, and the choices available to you.</p>
+      <p class="updated">Effective and last updated July 18, 2026</p>
+    </header>
+
+    <main id="policy">
+      <section class="card summary" aria-labelledby="short-version">
+        <h2 id="short-version">The short version</h2>
+        <p>Wordwyrm is an iOS game created by Poppy Studios. You can play without creating an account. Poppy Studios does not operate a player database or upload your scores, saved games, or word choices to its own servers.</p>
+
+        <div class="summary-grid">
+          <div class="summary-item">
+            <strong>Your game</strong>
+            <span>Scores, progress, tutorials, settings, and saved runs stay locally on your device.</span>
+          </div>
+          <div class="summary-item">
+            <strong>Advertising</strong>
+            <span>The free version uses Google AdMob for contextual, non-personalized ads, which may process device, advertising, interaction, and diagnostic information.</span>
+          </div>
+          <div class="summary-item">
+            <strong>Your choices</strong>
+            <span>Where required, Wordwyrm presents Google’s consent form and provides an in-app Privacy Choices control.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="scope">
+        <h2 id="scope">1. Who we are and what this policy covers</h2>
+        <p>Wordwyrm is published by Poppy Studios. This policy explains how information is handled when you use the Wordwyrm iOS app, contact Poppy Studios for support, or visit this privacy-policy page.</p>
+        <p>For privacy questions or requests, email <a href="mailto:ps.prisub@gmail.com">ps.prisub@gmail.com</a>.</p>
+      </section>
+
+      <section class="card" aria-labelledby="device-data">
+        <h2 id="device-data">2. Information kept on your device</h2>
+        <p>Wordwyrm stores the following game information locally on your iPhone or iPad so that the app can work and remember your choices:</p>
+        <ul>
+          <li>High scores and current game score</li>
+          <li>Saved-run information and game progress</li>
+          <li>Sound, appearance, and game-mode preferences</li>
+          <li>Tutorial completion and first-play guidance status</li>
+          <li>Remove Ads entitlement status received from Apple</li>
+        </ul>
+        <p>Poppy Studios does not receive this local gameplay information and does not use it to create a player profile. Deleting Wordwyrm removes its locally stored game data, subject to normal device backups managed by you or Apple.</p>
+      </section>
+
+      <section class="card" aria-labelledby="advertising">
+        <h2 id="advertising">3. Advertising and Google AdMob</h2>
+        <p>Unless you purchase Remove Ads, Wordwyrm uses the Google Mobile Ads SDK to display banner advertisements. Google and participating advertising providers may automatically process information such as:</p>
+        <ul>
+          <li>IP address and approximate or general location derived from it</li>
+          <li>Device, app, and app- or developer-bounded identifiers</li>
+          <li>Device model, operating-system version, app version, and language</li>
+          <li>Ads shown, ad impressions, clicks, and other ad interactions</li>
+          <li>App interactions and events used for advertising measurement</li>
+          <li>Crash logs, performance information, and other diagnostics</li>
+        </ul>
+        <p>Wordwyrm configures Google AdMob to serve contextual, non-personalized ads only and disables Google’s publisher first-party identifier. Google may still use limited information to provide and measure advertising, limit how often an ad appears, prevent fraud and abuse, and maintain its services. Poppy Studios generally receives aggregated advertising reports rather than information tied to your name.</p>
+
+        <h3>Consent and non-personalized advertising</h3>
+        <p>Wordwyrm uses Google’s User Messaging Platform. In regions where a privacy decision is required, the app may ask about the limited data processing or device storage needed to deliver and measure ads. Wordwyrm requests contextual, non-personalized ads regardless of whether a user’s choices could otherwise permit personalized advertising.</p>
+        <p>Wordwyrm does not currently request permission to access Apple’s Identifier for Advertisers through the App Tracking Transparency prompt.</p>
+
+        <h3>Sale or sharing</h3>
+        <p>Poppy Studios does not sell personal information for money, and Wordwyrm does not request personalized or targeted advertising. Where required, users can review or change their advertising privacy decisions through the <strong>Privacy Choices</strong> control shown inside Wordwyrm.</p>
+
+        <p class="note">Learn more in <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer">How Google uses information from apps that use its services</a> and the <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
+      </section>
+
+      <section class="card" aria-labelledby="purchases">
+        <h2 id="purchases">4. Remove Ads purchase</h2>
+        <p>Wordwyrm offers an optional one-time Remove Ads purchase through Apple’s StoreKit and the App Store. Apple processes the purchase, payment information, Apple Account, receipts, and transaction records under Apple’s policies. Poppy Studios does not receive your payment-card details or Apple Account password.</p>
+        <p>The app checks Apple’s verified entitlement information to determine whether ads should be removed. You can restore the purchase through Wordwyrm using the same Apple Account.</p>
+        <p>See <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple’s Privacy Policy</a> for information about Apple’s processing.</p>
+      </section>
+
+      <section class="card" aria-labelledby="direct-contact">
+        <h2 id="direct-contact">5. Information you send directly</h2>
+        <p>If you email Poppy Studios, we receive your email address and whatever information you choose to include. We use it only to answer your question, investigate a problem, protect the app and its users, or meet a legal obligation.</p>
+        <p>Please do not send sensitive personal information when requesting support.</p>
+      </section>
+
+      <section class="card" aria-labelledby="website">
+        <h2 id="website">6. This website</h2>
+        <p>This website contains no advertising, analytics, tracking pixels, or consent-dependent scripts. It does not set its own cookies. The hosting provider may process ordinary technical request information, such as an IP address, to deliver and secure the page under the provider’s own privacy terms.</p>
+      </section>
+
+      <section class="card" aria-labelledby="retention">
+        <h2 id="retention">7. Retention and deletion</h2>
+        <ul>
+          <li><strong>Local game information:</strong> remains on your device until you delete the app or remove the data through device-management or backup controls.</li>
+          <li><strong>Advertising information:</strong> is retained by Google and other participating providers according to their policies, legal obligations, and your privacy choices.</li>
+          <li><strong>Purchase information:</strong> is retained by Apple according to Apple’s policies and legal obligations.</li>
+          <li><strong>Support email:</strong> is kept only as long as reasonably needed to respond, maintain necessary records, resolve disputes, or comply with law.</li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="choices">
+        <h2 id="choices">8. Your privacy choices and rights</h2>
+        <p>Depending on where you live, you may have rights to access, correct, delete, restrict, or object to certain processing, withdraw consent, or opt out of certain targeted advertising or data sharing.</p>
+        <ul>
+          <li>Use <strong>Privacy Choices</strong> inside Wordwyrm when it is available to review or change advertising choices.</li>
+          <li>Delete Wordwyrm to remove its locally stored game information from that device.</li>
+          <li>Use <a href="https://myadcenter.google.com/" rel="noopener noreferrer">Google My Ad Center</a> to manage Google advertising preferences.</li>
+          <li>Email <a href="mailto:ps.prisub@gmail.com">ps.prisub@gmail.com</a> with a privacy request.</li>
+        </ul>
+        <p>Because Poppy Studios does not maintain player accounts or a gameplay database, we may not possess information that can be linked back to you. For data controlled independently by Google or Apple, you may also need to contact that provider directly. We will respond to verified requests as required by applicable law and will not discriminate against anyone for exercising privacy rights.</p>
+      </section>
+
+      <section class="card" aria-labelledby="children">
+        <h2 id="children">9. Children’s privacy</h2>
+        <p>Wordwyrm is intended for a general audience and is not specifically directed to children under 13. The app does not ask players to create accounts or submit their name, email address, contacts, photos, precise location, or other personal details to Poppy Studios.</p>
+        <p>If you are a parent or guardian and believe a child has sent personal information directly to Poppy Studios, contact us so that we can review and, where appropriate, delete it.</p>
+      </section>
+
+      <section class="card" aria-labelledby="providers">
+        <h2 id="providers">10. Service providers and international processing</h2>
+        <p>Wordwyrm relies on Google for advertising and consent management and on Apple for app distribution and purchases. These providers may process information in countries other than the one where you live, subject to their published privacy commitments and applicable safeguards.</p>
+        <p>Poppy Studios uses these providers to operate Wordwyrm and expects information accessed through the app to be protected consistently with this policy, the providers’ contractual commitments, and applicable law. Their independent processing is also governed by their own privacy policies.</p>
+      </section>
+
+      <section class="card" aria-labelledby="security">
+        <h2 id="security">11. Security</h2>
+        <p>Poppy Studios limits its own collection and keeps gameplay information on the device. We use established platform providers for advertising and purchases. No method of electronic storage or transmission is completely secure, but we take reasonable steps appropriate to the limited information we handle.</p>
+      </section>
+
+      <section class="card" aria-labelledby="changes">
+        <h2 id="changes">12. Changes to this policy</h2>
+        <p>We may update this policy when Wordwyrm’s features, service providers, or legal requirements change. The date at the top will show when the policy was last revised. Material changes will be communicated in an appropriate way.</p>
+      </section>
+
+      <section class="card contact" aria-labelledby="contact">
+        <p class="eyebrow">Questions or requests</p>
+        <h2 id="contact">Contact Poppy Studios</h2>
+        <p>Please include “Wordwyrm Privacy” in the subject line so your message can be handled promptly.</p>
+        <a class="contact-link" href="mailto:ps.prisub@gmail.com?subject=Wordwyrm%20Privacy">ps.prisub@gmail.com</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Poppy Studios · Wordwyrm · <a href="index.html">Support home</a></p>
+    </footer>
+  </div>
+</body>
+</html>
